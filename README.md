@@ -34,3 +34,5 @@ Been putting off learning React for long as I thought it has a huge learning cur
 - Components
 - Props
 - Routes
+- React.Fragment
+- Portals
