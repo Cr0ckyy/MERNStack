@@ -2,7 +2,7 @@
 
 Documenting my process of learning to build a full MERNStack application following Maximilian Schwarzmüller's (Academind) tutorial on Udemy **React, NodeJS, Express & MongoDB - The MERN Fullstack Guide**
 
-Been putting off learning React for long as I thought it has a huge learning curve like Angular (it was a disaster learning it back then when I have absolutely minimal coding experience on web languages). Surprisingly turned out to be very easy to get my head around as it acts like a mini-extension to compartmentalize HTML rather than a full blown framework with Routers, Providers and Services and a very complex coding tree structure (looking at you Flutter).
+I've been putting off learning React for a long time as I was traumatized by the learning curve when I first dipped my toes into Angular. It was such a disaster learning it back then as I have no prior experience in coding on web languages. Surprisingly turned out to be very easy to get my head around as it acts like a mini-extension to compartmentalize HTML rather than a full blown framework with Routers, Providers and Services (sigh Angular) and a very complex coding tree structure (looking at you Flutter).
 
 # Pros and Cons (based on my experience so far)
 - Easy to weave in to any basic HTML projects. Its lightweight, doesn't have too much bloat. Use extensions only when needed. Easy to understand and refactor into current HTML as it is able to compartmentalize large chunks of HTML code in a page into smaller components.
