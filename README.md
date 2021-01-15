@@ -37,3 +37,10 @@ I've been putting off learning React for a long time as I was traumatized by the
 - React.Fragment
 - Portals
 - useState
+## 15/01/2021
+- CSSTransitions third party packages
+- Dynamic Routes
+- { useParams }
+- Multi-component setup. Forwarding props to component within a component (Componentception)
+- Google Maps API SDK
+- { useRef }
