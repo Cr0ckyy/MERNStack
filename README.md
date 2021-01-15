@@ -50,3 +50,4 @@ I've been putting off learning React for a long time as I was traumatized by the
 - Multi-component setup. Forwarding props to component within a component (Componentception)
 - Google Maps API SDK
 - { useRef }
+- { useEffect }
