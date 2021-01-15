@@ -7,7 +7,6 @@ Here is a prety cool screenshot of Section 5 progress on Lesson 47:
 ![alt text](https://github.com/JChinoz/MERNStack/blob/main/public/images/PrettyCool.PNG)
 
 *Noctis High Contrast theme looks pretty cool and gives me such a cyberpunk vibe*
-*Incriminating information have been redacted*
 
 I've been putting off learning React for a long time as I was traumatized by the learning curve when I first dipped my toes into Angular. It was such a disaster learning it back then as I have no prior experience in coding on web languages. Surprisingly turned out to be very easy to get my head around as it acts like a mini-extension to compartmentalize HTML rather than a full blown framework with Routers, Providers and Services (sigh Angular) and a very complex coding tree structure (looking at you Flutter).
 
