@@ -32,7 +32,7 @@ const DUMMY_PLACE = [
 
 const UserPlaces = () => {
     const userId = useParams().userId;
-    const loadedPlaces = DUMMY_PLACE.filter(place => place.creator == userId);
+    const loadedPlaces = DUMMY_PLACE.filter(place => place.creator === userId);
     return <PlaceList items={loadedPlaces}/>
 }
 
