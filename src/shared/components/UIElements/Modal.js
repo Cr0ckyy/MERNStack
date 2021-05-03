@@ -7,7 +7,7 @@ import "./Modal.css";
 
 const ModalOverlay = (props) => {
   const content = (
-    <div className={`modal ${props.className}`} style={props.style}>
+    <div className={`modal ${props.className} style={props.style}`}>
       <header className={`modal__header ${props.headerClass}`}>
         <h2>{props.header}</h2>
       </header>
@@ -34,12 +34,12 @@ const Modal = (props) => {
       {props.show && <Backdrop onClick={props.onCancel} />}
       <CSSTransition
         in={props.show}
-        timeout={200}
         mountOnEnter
         unmountOnExit
+        timeout={200}
         classNames="modal"
       >
-        <ModalOverlay {...props}/>
+        <ModalOverlay {...props} />
       </CSSTransition>
     </React.Fragment>
   );

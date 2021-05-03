@@ -1,41 +1,39 @@
-import React from "react";
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import {useParams} from 'react-router-dom';
 
-import PlaceList from "../components/PlaceList";
+import PlaceList from '../components/PlaceList';
 
-const DUMMY_PLACES = [
-  {
-    id: "p1",
-    title: "Empire State Building",
-    description: "One of the most famous skyscrappers in the world",
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1272532349151072262/kBEZiWIQ.jpg",
-    address: "20 W 34th St, New York, NY 10001, United States",
-    location: {
-      lat: 40.7484405,
-      lng: -73.9878531,
+const DUMMY_PLACE = [
+    {
+        id: 'p1',
+        title: 'Empire State Building',
+        description: 'One of the most famous sky scrappers in the world',
+        imageUrl: 'http://static1.squarespace.com/static/58fbfecf725e25a3d1966494/5902947920099eda52c5ac82/5a01f46bd63352b3be374974/1554667940303/?format=1500w',
+        address: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France',
+        location: {
+            lat: 48.8583701,
+            lng: 2.2922926,
+        },
+        creator: 'u1',
     },
-    creatorId: 'u1'
-  },
-  {
-    id: "p2",
-    title: "Empire State Building",
-    description: "One of the most famous skyscrappers in the world",
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1272532349151072262/kBEZiWIQ.jpg",
-    address: "20 W 34th St, New York, NY 10001, United States",
-    location: {
-      lat: 40.7484405,
-      lng: -73.9878531,
+    {
+        id: 'p2',
+        title: 'Empire State Building',
+        description: 'One of the most famous sky scrappers in the world',
+        imageUrl: 'http://static1.squarespace.com/static/58fbfecf725e25a3d1966494/5902947920099eda52c5ac82/5a01f46bd63352b3be374974/1554667940303/?format=1500w',
+        address: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France',
+        location: {
+            lat: 48.8583701,
+            lng: 2.2922926,
+        },
+        creator: 'u2',
     },
-    creatorId: 'u2'
-  },
 ];
 
 const UserPlaces = () => {
-  const userId = useParams().userId;
-  const loadedPlaces = DUMMY_PLACES.filter(place => place.creatorId === userId);
-  return <PlaceList items={loadedPlaces} />;
-};
+    const userId = useParams().userId;
+    const loadedPlaces = DUMMY_PLACE.filter(place => place.creator == userId);
+    return <PlaceList items={loadedPlaces}/>
+}
 
 export default UserPlaces;
