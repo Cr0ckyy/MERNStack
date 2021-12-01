@@ -56,3 +56,6 @@ I've been putting off learning React for a long time as I was traumatized by the
 ## 05/05/2021
 - { useReducer }
 - { useCallback }
+
+## 01/12/2021
+- Context
