@@ -1,62 +1,58 @@
-import React, { useState, useContext } from "react";
+import React, {useContext, useState} from "react";
 
 import Card from "../../shared/components/UIElements/Card";
 import Input from "../../shared/components/FormElements/Input";
 import Button from "../../shared/components/FormElements/Button";
-import {
-  VALIDATOR_EMAIL,
-  VALIDATOR_MINLENGTH,
-  VALIDATOR_REQUIRE,
-} from "../../shared/util/validators";
-import { useForm } from "../../shared/hooks/form-hook";
+import {VALIDATOR_EMAIL, VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE,} from "../../shared/util/validators";
+import {useForm} from "../../shared/hooks/form-hook";
 import "./Auth.css";
-import { AuthContext } from "../../shared/context/auth-context";
+import {AuthContext} from "../../shared/context/auth-context";
 
 const Auth = () => {
-  const auth = useContext(AuthContext);
+    const auth = useContext(AuthContext);
 
-  const [isLoginMode, setIsLoginMode] = useState(true);
-  const [formState, inputHandler, setFormData] = useForm(
-    {
-      email: {
-        valid: "",
-        isValid: false,
-      },
-      password: {
-        value: "",
-        isValid: false,
-      },
-    },
-    false
-  );
-
-  const authSubmitHandler = (event) => {
-    event.preventDefault();
-    console.log(formState.inputs);
-		auth.login();
-  };
-
-  const switchModeHandler = (event) => {
-    if (!isLoginMode) {
-      setFormData(
+    const [isLoginMode, setIsLoginMode] = useState(true);
+    const [formState, inputHandler, setFormData] = useForm(
         {
-          ...formState.inputs,
-          name: undefined,
-        },
-        formState.inputs.email.isValid && formState.inputs.password.isValid
-      );
-    } else {
-      setFormData(
-        {
-          ...formState.inputs,
-          name: {
-            value: "",
-            isValid: false,
-          },
+            email: {
+                valid: "",
+                isValid: false,
+            },
+            password: {
+                value: "",
+                isValid: false,
+            },
         },
         false
-      );
-    }
+    );
+
+    const authSubmitHandler = (event) => {
+        event.preventDefault();
+        console.log(formState.inputs);
+        auth.login();
+    };
+
+    const switchModeHandler = () => {
+        if (!isLoginMode) {
+            setFormData(
+                {
+                    ...formState.inputs,
+                    name: undefined,
+                },
+                formState.inputs.email.isValid && formState.inputs.password.isValid
+            );
+        } else {
+            setFormData(
+                {
+                    ...formState.inputs,
+                    name: {
+                        value: "",
+                        isValid: false,
+                    },
+                },
+                false
+            );
+        }
     setIsLoginMode((prevMode) => !prevMode);
   };
 
